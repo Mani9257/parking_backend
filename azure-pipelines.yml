@@ -12,6 +12,9 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+steps:
+- publish: $(System.DefaultWorkingDirectory)/bin/WebApp
+  artifact: WebApp
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
