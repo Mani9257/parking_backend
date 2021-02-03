@@ -24,6 +24,11 @@ steps:
   inputs:
     targetPath: '$(Pipeline.Workspace)'
     artifact: 'drop'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
     publishLocation: 'pipeline'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
