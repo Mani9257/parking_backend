@@ -6,6 +6,13 @@
     appType: 'webAppLinux'
     WebAppName: 'azure-dev'
     packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Free Trial(00db384b-4878-4563-b97e-af81ea03cd83)'
+    appType: 'webAppLinux'
+    WebAppName: 'azure-dev'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
     RuntimeStack: 'JAVA|8-jre8'
 - task: AzureRmWebAppDeployment@4
   inputs:
